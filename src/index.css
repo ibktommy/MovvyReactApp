@@ -8,6 +8,7 @@
   --pry-font: 'Work Sans', sans-serif;
   --sec-font: 'Panchang', sans-serif;
   --pry-color: rgb(225, 202, 76);
+  --pry-deep-color: rgb(143, 127, 47);
   --bg-white: #f8f8ff;
   --card-bg: #f8f4ff;
   --white: #fff;
@@ -26,5 +27,6 @@ html {
 
 body {
   background-color: var(--bg-white);
+  color: var(--text-dark);
 }
 
