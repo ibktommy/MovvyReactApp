@@ -30,3 +30,12 @@ body {
   color: var(--text-dark);
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
