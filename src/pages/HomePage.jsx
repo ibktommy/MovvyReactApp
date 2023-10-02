@@ -2,7 +2,7 @@ import { Outlet, useNavigation } from 'react-router-dom'
 
 import Navbar from '../components/Navbar'
 import RouteLoader from '../components/RouteLoader'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 const HomePage = () => {
   // checking routes states using useNavigation
@@ -17,7 +17,7 @@ const HomePage = () => {
           routeState ? <RouteLoader /> : <Outlet />
         }
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

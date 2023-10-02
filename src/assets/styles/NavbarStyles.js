@@ -5,10 +5,13 @@ const NavbarStyles = styled.nav`
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 1.5rem 0;
+	height: 8rem;
 	box-shadow: var(--box-shadow);
   z-index: 5;
   background-color: var(--bg-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	.nav-center {
 		width: 80%;
@@ -30,33 +33,14 @@ const NavbarStyles = styled.nav`
 	}
 
 	ul a {
-		display: inline-block;
-		position: relative;
 		font-family: var(--pry-font);
 		font-size: 1.8rem;
 		font-weight: 400;
 		padding: 0rem 0.5rem;
-		transition: 0.4s ease;
 	}
 
 	ul a:first-of-type {
 		margin-right: 1.5rem;
-	}
-
-	ul a::before {
-		position: absolute;
-		content: '';
-		bottom: -0.3rem;
-		left: 0rem;
-		width: 100%;
-		height: 0.2rem;
-		background-color: var(--pry-color);
-		transform: scale(0);
-	}
-
-	ul a:hover::before {
-		transform: scale(1);
-		transition: 0.4s ease;
 	}
 `;
 
