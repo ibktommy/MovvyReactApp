@@ -1,8 +1,9 @@
-import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import LandingPage from './pages/LandingPage'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 // React Query Client for data fetching and management
 const queryClient = new QueryClient({
@@ -35,6 +36,7 @@ const App = () => {
   return (
 		<QueryClientProvider client={queryClient}>
 			<RouterProvider router={router} />
+			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
 	);
 }

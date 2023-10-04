@@ -18,6 +18,17 @@ const LandingFrameStyles = styled.div`
     margin-bottom: 2rem;
   }
 
+  .spinner {
+    align-self: center;
+  }
+
+  p {
+    align-self: center;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: .7;
+  }
   a {
     display: inline-block;
     align-self: flex-end;

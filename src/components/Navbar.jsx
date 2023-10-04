@@ -11,8 +11,8 @@ const Navbar = () => {
 				</Link>
 
 				<ul>
-					<Link to='/movies'>Movies</Link>
-					<Link to='/series'>TV Series</Link>
+					<Link to='/movies' className="link">Movies</Link>
+					<Link to='/series' className="link">TV Series</Link>
 				</ul>
 			</div>
 		</NavbarStyles>
