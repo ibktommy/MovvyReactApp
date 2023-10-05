@@ -1,60 +1,62 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-  --pry-font: 'Work Sans', sans-serif;
-  --sec-font: 'Panchang', sans-serif;
-  --pry-color: rgb(225, 202, 76);
-  --pry-deep-color: rgb(143, 127, 47);
-  --bg-white: #f8f8ff;
-  --card-bg: #f8f4ff;
-  --white: #fff;
-  --stroke-bottom: #9d9d9d;
-  --text-dark: #4a4a4a;
-  --text-fade: #aeaeae;
-  --box-shadow: rgba(0,0,0,0.1) 0px 0px 5px 0px, rgba(0,0,0,0.1) 0px 0px 1px 0px;
+	--pry-font: 'Work Sans', sans-serif;
+	--sec-font: 'Panchang', sans-serif;
+	--pry-color: rgb(225, 202, 76);
+	--pry-deep-color: rgb(143, 127, 47);
+	--bg-white: #f8f8ff;
+	--card-bg: #f8f4ff;
+	--white: #fff;
+	--stroke-bottom: #9d9d9d;
+	--text-dark: #4a4a4a;
+	--text-fade: #aeaeae;
+	--box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+		rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	--card-shadow: rgba(0,0,0,0.05) 0px 0px 0px 1px, rgb(209,213,219) 0px 0px 0px 1px inset;
+  --frame-shadow: rgba(0,0,0,0.24) 0px 3px 5px;
 }
 
 html {
-  font-family: var(--pry-font);
-  font-size: 62.5%;
-  line-height: 1.4;
-  font-weight: 400;
+	font-family: var(--pry-font);
+	font-size: 62.5%;
+	line-height: 1.4;
+	font-weight: 400;
 }
 
 body {
-  background-color: var(--bg-white);
-  color: var(--text-dark);
+	background-color: var(--bg-white);
+	color: var(--text-dark);
 }
 
 ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 a {
-  display: inline-block;
-  position: relative;
-  color: var(--text-dark);
-  text-decoration: none;
+	display: inline-block;
+	position: relative;
+	color: var(--text-dark);
+	text-decoration: none;
 }
 
 a.link::before {
-		position: absolute;
-		content: '';
-		bottom: -0.3rem;
-		left: 0rem;
-		width: 100%;
-		height: 0.2rem;
-		background-color: var(--pry-color);
-		transform: scale(0);
-    transition: 0.4s ease;
-	}
+	position: absolute;
+	content: '';
+	bottom: -0.3rem;
+	left: 0rem;
+	width: 100%;
+	height: 0.2rem;
+	background-color: var(--pry-color);
+	transform: scale(0);
+	transition: 0.4s ease;
+}
 
-	a.link:hover::before {
-		transform: scale(1);
-		transition: 0.4s ease;
-	}
-
+a.link:hover::before {
+	transform: scale(1);
+	transition: 0.4s ease;
+}

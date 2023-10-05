@@ -5,11 +5,9 @@ const FrameStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: .1rem solid var(--text-dark);
+  box-shadow:var(--frame-shadow);
   padding: .5rem 0.5rem 1rem 0.5rem;
-  &:first-of-type {
     margin-bottom: 5rem;
-  }
 
   h3 {
     font-size: 2.5rem;
@@ -22,13 +20,14 @@ const FrameStyles = styled.div`
     align-self: center;
   }
 
-  p {
+  .frame-para {
     align-self: center;
     text-transform: capitalize;
     font-size: 1.5rem;
     font-style: italic;
     opacity: .7;
   }
+  
   a {
     display: inline-block;
     align-self: flex-end;

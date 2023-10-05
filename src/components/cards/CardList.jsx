@@ -7,8 +7,9 @@ const CardList = ({ data }) => {
 	return (
 		<CardListStyles>
 			<div className='card-list'>
-				{dataDetails.map((dataItem, index) => {
-					return <CardItem dataItem={dataItem} key={index} />;
+				{dataDetails.map((dataItem) => {
+						const { id } = dataItem;
+					return <CardItem dataItem={dataItem} key={id} />;
 				})}
 			</div>
 		</CardListStyles>

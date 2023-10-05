@@ -14,8 +14,6 @@ const MoviesFrame = ({
 	data,
 }) => {
 
-	console.log(data);
-
 	if (status === 'loading' && fetchStatus === 'fetching' && data === undefined) {
 		return (
 			<FrameStyles>
