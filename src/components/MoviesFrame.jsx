@@ -1,21 +1,24 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom"
-import LandingFrameStyles from "../assets/styles/LandingFrameStyles"
+import FrameStyles from "../assets/styles/FrameStyles"
 import { RingLoader } from 'react-spinners';
+import CardList from "./cards/CardList";
 
 
-const LandingFrame = ({
+const MoviesFrame = ({
 	title,
 	linkText,
 	status,
 	error,
-	data,
 	fetchStatus,
+	data,
 }) => {
+
+	console.log(data);
 
 	if (status === 'loading' && fetchStatus === 'fetching' && data === undefined) {
 		return (
-			<LandingFrameStyles>
+			<FrameStyles>
 				<h3>{title}</h3>
 				<RingLoader
 					color='#e1ca4c'
@@ -24,36 +27,37 @@ const LandingFrame = ({
 					className='spinner'
 				/>
 				<Link to='./movies' className="link">explore {linkText}</Link>
-			</LandingFrameStyles>
+			</FrameStyles>
 		);
 	}
 
 	if (status === 'loading' && fetchStatus === 'paused' && data === undefined) {
 		return (
-			<LandingFrameStyles>
+			<FrameStyles>
 				<h3>{title}</h3>
 				<p>Sorry, could not load {linkText}. check your network! </p>
         <Link to='./movies' className="link">explore {linkText}</Link>
-			</LandingFrameStyles>
+			</FrameStyles>
 		);
 	}
 
 	if (error) {
 		return (
-			<LandingFrameStyles>
+			<FrameStyles>
 				<h3>{title}</h3>
 				<p>`Sorry, technical error: ${error.message}`</p>
-        <Link to='./movies' className="link">explore {linkText}</Link>
-			</LandingFrameStyles>
+        <Link to='./series' className="link">explore {linkText}</Link>
+			</FrameStyles>
 		);
 	}
 
 	return (
-		<LandingFrameStyles>
+		<FrameStyles>
 			<h3>{title}</h3>
+			<CardList data={data}/>
 			<Link to='./movies' className="link">explore {linkText}</Link>
-		</LandingFrameStyles>
+		</FrameStyles>
 	);
 };
 
-export default LandingFrame
+export default MoviesFrame

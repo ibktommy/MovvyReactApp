@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-const LandingFrameStyles = styled.div`
+const FrameStyles = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   border: .1rem solid var(--text-dark);
-  padding: .5rem 0.2rem 1rem 0.2rem;
+  padding: .5rem 0.5rem 1rem 0.5rem;
   &:first-of-type {
     margin-bottom: 5rem;
   }
@@ -39,4 +39,4 @@ const LandingFrameStyles = styled.div`
   }
 `;
 
-export default LandingFrameStyles
+export default FrameStyles
