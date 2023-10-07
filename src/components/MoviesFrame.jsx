@@ -33,7 +33,7 @@ const MoviesFrame = ({
 		return (
 			<FrameStyles>
 				<h3>{title}</h3>
-				<p>Sorry, could not load {linkText}. check your network! </p>
+				<p className='frame-para'>Sorry, could not load {linkText}. check your network! </p>
         <Link to='./movies' className="link">explore {linkText}</Link>
 			</FrameStyles>
 		);
@@ -43,7 +43,7 @@ const MoviesFrame = ({
 		return (
 			<FrameStyles>
 				<h3>{title}</h3>
-				<p>`Sorry, technical error: ${error.message}`</p>
+				<p className='frame-para'>`Sorry, technical error: ${error.message}`</p>
         <Link to='./series' className="link">explore {linkText}</Link>
 			</FrameStyles>
 		);

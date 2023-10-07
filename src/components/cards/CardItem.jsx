@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-import CardItemStyles from '../../assets/styles/CardItemStyles';
+// import '../../assets/styles/CardItemStyles.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const CardItem = ({ dataItem }) => {
 	const {
@@ -13,7 +15,7 @@ const CardItem = ({ dataItem }) => {
 	} = dataItem;
 
 	return (
-		<CardItemStyles>
+		<>
 			<img src={imgURL} alt={movieTitle || seriesTitle} />
 			<div className='card-item-details'>
 				<div className='card-item-texts'>
@@ -24,7 +26,7 @@ const CardItem = ({ dataItem }) => {
 					<p className='rating'>{rating.toFixed(2)}</p>
 				</div>
 			</div>
-		</CardItemStyles>
+		</>
 	);
 };
 
