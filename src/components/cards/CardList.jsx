@@ -8,7 +8,7 @@ const CardList = ({ data }) => {
 	const dataDetails = data.results;
 	return (
 		<CardListStyles>
-			<Swiper spaceBetween={20} slidesPerView={4.9}>
+			<Swiper spaceBetween={20} slidesPerView={'auto'} className='swiper-grid'>
 				{
 					dataDetails.map((dataItem) => {
 						const { id } = dataItem

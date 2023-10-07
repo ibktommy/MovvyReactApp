@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-// import '../../assets/styles/CardItemStyles.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import LikeIcon from '../../assets/svg/LikeIcon'
 
 const CardItem = ({ dataItem }) => {
 	const {
@@ -22,8 +20,12 @@ const CardItem = ({ dataItem }) => {
 					<p className='title'>{movieTitle || seriesTitle}</p>
 					<p className='date'>{movieDate || seriesDate}</p>
 				</div>
-				<div className='card-item-rating'>
-					<p className='rating'>{rating.toFixed(2)}</p>
+				<div className='card-item-info'>
+					<div className='rating'>
+						<p>{rating.toFixed(2)}</p>
+						<LikeIcon id="like-icon"/>
+					</div>
+					<button>view info</button>
 				</div>
 			</div>
 		</>
