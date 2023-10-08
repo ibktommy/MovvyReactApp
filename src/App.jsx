@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import LandingPage from './pages/LandingPage'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import SearchPage from './pages/SearchPage'
 
 // React Query Client for data fetching and management
 const queryClient = new QueryClient({
@@ -28,6 +29,10 @@ const App = () => {
         { 
           index: true,
           element: <LandingPage />
+        },
+        {
+          path: '/search',
+          element: <SearchPage />
         }
       ]
     },
