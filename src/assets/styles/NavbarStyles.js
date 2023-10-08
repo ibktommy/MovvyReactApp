@@ -7,8 +7,8 @@ const NavbarStyles = styled.nav`
 	width: 100%;
 	height: 8rem;
 	box-shadow: var(--box-shadow);
-  z-index: 5;
-  background-color: var(--bg-white);
+	z-index: 5;
+	background-color: var(--bg-white);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -39,8 +39,26 @@ const NavbarStyles = styled.nav`
 		padding: 0rem 0.5rem;
 	}
 
-	ul a:first-of-type {
+	ul a:not(:last-of-type) {
 		margin-right: 1.5rem;
+	}
+
+	ul a button {
+		font-family: var(--pry-font);
+		font-size: 1.8rem;
+		font-weight: 400;
+		padding: 0.8rem 0.5rem;
+		border: .2rem solid var(--pry-color);
+		border-radius: .4rem;
+		background-color: var(--pry-color);
+		color: var(--white);
+		cursor: pointer;
+
+		&:hover {
+			background-color: transparent;
+			color: var(--pry-color);
+			transition: .4s ease;
+		}
 	}
 `;
 

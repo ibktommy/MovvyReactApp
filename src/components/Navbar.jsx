@@ -13,6 +13,9 @@ const Navbar = () => {
 				<ul>
 					<Link to='/movies' className="link">Movies</Link>
 					<Link to='/series' className="link">TV Series</Link>
+					<Link to='/search'>
+						<button>Go to Search</button>
+					</Link>
 				</ul>
 			</div>
 		</NavbarStyles>
