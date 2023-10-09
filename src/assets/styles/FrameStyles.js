@@ -7,7 +7,7 @@ const FrameStyles = styled.div`
   align-items: flex-start;
   box-shadow:var(--frame-shadow);
   padding: .5rem 0.5rem 1rem 0.5rem;
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 
   h3 {
     font-size: 2.5rem;

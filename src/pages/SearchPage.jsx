@@ -16,7 +16,7 @@ const searchCategories = [
 const SearchPage = () => {
 	const [categories, setCategories] = useState(searchCategories);
 	const [category, setCategory] = useState('movies');
-	const [searchTerm, setSearchTerm] = useState('')
+	const [searchTerm, setSearchTerm] = useState('');
 
 	const categoriesArray = categories.map((categoriesItem) => {
 		const { category } = categoriesItem;
@@ -29,6 +29,7 @@ const SearchPage = () => {
 
 		for (let i = 0; i < categoriesBtn.length; i++) {
 			categoriesBtn[i].addEventListener('click', () => {
+				setSearchTerm('') //Reset the searchTerm when re-rendering the form
 				for (let j = 0; j < categoriesBtn.length; j++) {
 					categoriesBtn[j].classList.remove('active');
 					categoriesBtn[i].classList.add('active');
@@ -46,7 +47,7 @@ const SearchPage = () => {
 	function SearchFormHandler(e) {
 		e.preventDefault();
 
-		const searchInputValue = e.target.elements.search.value;
+		let searchInputValue = e.target.elements.search.value
 
 		if (searchInputValue.trim() === '') {
 			alert('You cannot include empty space as text');
@@ -54,6 +55,7 @@ const SearchPage = () => {
 		}
 
 		setSearchTerm(searchInputValue)
+		e.target.elements.search.value = ''
 	}
 
 	return (
@@ -96,7 +98,7 @@ const SearchPage = () => {
 				</form>
 			)}
 
-			<SearchList searchTerm={searchTerm} category={category}/>
+			{searchTerm && <SearchList searchTerm={searchTerm} category={category} />}
 		</SearchPageStyles>
 	);
 };

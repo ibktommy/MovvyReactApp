@@ -5,12 +5,6 @@ const CardList = styled.div`
 	overflow: hidden;
 	margin: 2rem 0;
 
-  /* .swiper-grid {
-    width: 100%;
-    display: grid !important;
-    grid-template-columns: repeat(5, 1fr)!important;
-  } */
-
 	.image-card {
 		width: calc(25rem + 2vw) !important;
 		height: auto !important;
