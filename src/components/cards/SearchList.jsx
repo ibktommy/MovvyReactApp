@@ -1,8 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import SearchListStyles from "../../assets/styles/SearchListStyles";
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import SearchListStyles from '../../assets/styles/SearchListStyles';
 import { RingLoader } from 'react-spinners';
-import SearchItem from '../cards/SearchItem'
+import SearchItem from '../cards/SearchItem';
+import CardItem from './CardItem';
 
 const apikey = import.meta.env.VITE_API_ACCESS_KEY;
 
@@ -17,7 +18,7 @@ const SearchList = ({ searchTerm, category }) => {
 
 	console.log(searchURL);
 
-  const fetchSearchTerm = useQuery({
+	const fetchSearchTerm = useQuery({
 		queryKey: ['searchResult', searchTerm],
 		queryFn: async () => {
 			const result = await axios.get(searchURL);
@@ -26,9 +27,10 @@ const SearchList = ({ searchTerm, category }) => {
 		},
 	});
 
-  const { data, status, error, fetchStatus } = fetchSearchTerm
+	const { data, status, error, fetchStatus } = fetchSearchTerm;
+	// const searchData = data.data.results
 
-  if (
+	if (
 		status === 'loading' &&
 		fetchStatus === 'fetching' &&
 		data === undefined
@@ -50,9 +52,7 @@ const SearchList = ({ searchTerm, category }) => {
 		return (
 			<SearchListStyles>
 				<h3>search results:</h3>
-				<p>
-					Sorry, could not load results. check your network!{' '}
-				</p>
+				<p>Sorry, could not load results. check your network! </p>
 			</SearchListStyles>
 		);
 	}
@@ -66,14 +66,26 @@ const SearchList = ({ searchTerm, category }) => {
 		);
 	}
 
-  console.log(data.data.results);
+	const searchData = data.data.results;
 
 	return (
-    <SearchListStyles>
-      <h3>Search results:</h3>
-      <SearchItem searchResult={data.data.results}/>
-    </SearchListStyles>
-  );
+		<SearchListStyles>
+			<h3>Search results</h3>
+			{searchData.length === 0 && (
+				<p>Sorry, this title does not exist in the database</p>
+			)}
+
+			{searchData.length >= 1 && (
+				<div className='search-list'>
+					{searchData.map((dataItem) => (
+						<div className='search-card' key={dataItem.id}>
+							<CardItem dataItem={dataItem} />
+						</div>
+					))}
+				</div>
+			)}
+		</SearchListStyles>
+	);
 };
 
 export default SearchList;
