@@ -29,8 +29,10 @@ html {
 }
 
 body {
+	position: relative;
 	background-color: var(--bg-white);
 	color: var(--text-dark);
+	min-height: 100vh;
 }
 
 ul {

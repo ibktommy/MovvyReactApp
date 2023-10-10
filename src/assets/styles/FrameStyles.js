@@ -9,6 +9,10 @@ const FrameStyles = styled.div`
   padding: .5rem 0.5rem 1rem 0.5rem;
   margin-bottom: 5rem;
 
+  &:last-of-type {
+    margin-bottom: 15rem;
+  }
+
   h3 {
     font-size: 2.5rem;
     font-weight: 500;
