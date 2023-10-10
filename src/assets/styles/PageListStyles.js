@@ -10,7 +10,7 @@ const PageListStyles = styled.div`
 	margin-bottom: 10rem;
 	height: fit-content;
 	box-shadow: var(--frame-shadow);
-	padding: 0.5rem 0.5rem 1rem 0.5rem;
+	padding: 1rem;
 
 	p {
 		align-self: center;
