@@ -16,8 +16,6 @@ const SearchList = ({ searchTerm, category }) => {
 		searchURL = `https://api.themoviedb.org/3/search/tv?query=${searchTerm}&include_adult=false&language=en-US&api_key=${apikey}&page=1',`;
 	}
 
-	console.log(searchURL);
-
 	const fetchSearchTerm = useQuery({
 		queryKey: ['searchResult', searchTerm],
 		queryFn: async () => {

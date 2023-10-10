@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 const SearchListStyles = styled.div`
 	width: 100%;
-	margin-bottom: 5rem;
+	margin-bottom: 10rem;
 	height: fit-content;
 	box-shadow: var(--frame-shadow);
 	padding: 0.5rem 0.5rem 1rem 0.5rem;
