@@ -4,9 +4,9 @@ import PageList from './cards/PageList';
 
 const PageFrame = ({ title }) => {
 	const pageMenuList = [
+		`top rated ${title}`,
 		`trending ${title}`,
 		`popular ${title}`,
-		`latest ${title}`,
 	];
 
 	const [pageMenu, setPageMenuList] = useState(`trending ${title}`);
@@ -44,7 +44,7 @@ const PageFrame = ({ title }) => {
 				))}
 			</div>
 
-      <PageList pageMenu={pageMenu}/>
+      <PageList pageMenu={pageMenu} title={title}/>
 		</PageFrameStyles>
 	);
 };

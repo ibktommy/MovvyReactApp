@@ -7,6 +7,7 @@ const PageFrameStyles = styled.div`
   align-items: center;
 
   .page-menu {
+    margin-bottom: 3rem;
     button {
       display: inline-block;
       color: var(--white);
