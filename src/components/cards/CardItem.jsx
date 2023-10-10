@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import LikeIcon from '../../assets/svg/LikeIcon'
+import MissingImage from '../../assets/images/missing-image-svgrepo-com-min.png'
 
 const CardItem = ({ dataItem }) => {
 	const {
@@ -8,7 +9,9 @@ const CardItem = ({ dataItem }) => {
 		vote_average: rating,
 		release_date: movieDate,
 		first_air_date: seriesDate,
-		imgURL = `https://image.tmdb.org/t/p/original/${dataItem?.poster_path}`,
+		imgURL = dataItem?.poster_path === null
+			? MissingImage
+			: `https://image.tmdb.org/t/p/original/${dataItem?.poster_path}`,
 		id,
 	} = dataItem;
 

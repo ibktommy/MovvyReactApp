@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import SearchPageStyles from '../assets/styles/SearchPageStyles';
 import SearchList from '../components/cards/SearchList';
+import Button from '../components/Button';
 
 const searchCategories = [
 	{
@@ -29,7 +30,7 @@ const SearchPage = () => {
 
 		for (let i = 0; i < categoriesBtn.length; i++) {
 			categoriesBtn[i].addEventListener('click', () => {
-				setSearchTerm('') //Reset the searchTerm when re-rendering the form
+				setSearchTerm(''); //Reset the searchTerm when re-rendering the form
 				for (let j = 0; j < categoriesBtn.length; j++) {
 					categoriesBtn[j].classList.remove('active');
 					categoriesBtn[i].classList.add('active');
@@ -47,15 +48,15 @@ const SearchPage = () => {
 	function SearchFormHandler(e) {
 		e.preventDefault();
 
-		let searchInputValue = e.target.elements.search.value
+		let searchInputValue = e.target.elements.search.value;
 
 		if (searchInputValue.trim() === '') {
 			alert('You cannot include empty space as text');
 			return;
 		}
 
-		setSearchTerm(searchInputValue)
-		e.target.elements.search.value = ''
+		setSearchTerm(searchInputValue);
+		e.target.elements.search.value = '';
 	}
 
 	return (

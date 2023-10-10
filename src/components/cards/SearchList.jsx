@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import SearchListStyles from '../../assets/styles/SearchListStyles';
 import { RingLoader } from 'react-spinners';
-import SearchItem from '../cards/SearchItem';
+// import SearchItem from '../cards/SearchItem';
 import CardItem from './CardItem';
 
 const apikey = import.meta.env.VITE_API_ACCESS_KEY;
@@ -28,7 +28,6 @@ const SearchList = ({ searchTerm, category }) => {
 	});
 
 	const { data, status, error, fetchStatus } = fetchSearchTerm;
-	// const searchData = data.data.results
 
 	if (
 		status === 'loading' &&
@@ -66,7 +65,7 @@ const SearchList = ({ searchTerm, category }) => {
 		);
 	}
 
-	const searchData = data.data.results;
+	const searchData = data.data.results; //Get the data to be parsed to the CardItem
 
 	return (
 		<SearchListStyles>
