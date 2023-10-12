@@ -48,8 +48,8 @@ const NavbarStyles = styled.nav`
 		font-size: 1.8rem;
 		font-weight: 400;
 		padding: 0.8rem 0.5rem;
-		border: .2rem solid var(--pry-color);
-		border-radius: .4rem;
+		border: 0.2rem solid var(--pry-color);
+		border-radius: 0.4rem;
 		background-color: var(--pry-color);
 		color: var(--white);
 		cursor: pointer;
@@ -57,7 +57,52 @@ const NavbarStyles = styled.nav`
 		&:hover {
 			background-color: transparent;
 			color: var(--pry-color);
-			transition: .4s ease;
+			transition: 0.4s ease;
+		}
+	}
+
+	/* Responsiveness */
+
+	@media screen and (max-width: 1023px) {
+		.nav-center {
+			width: 95%;
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		.logo svg {
+			width: 13rem;
+		}
+
+		ul a {
+			font-size: 1.5rem;
+		}
+
+		ul a:not(:last-of-type) {
+			margin-right: 1rem;
+		}
+
+		ul a button {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.nav-center {
+			width: 98%;
+		}
+
+		.logo svg {
+			width: 10rem;
+		}
+
+		ul a {
+			font-size: 1.3rem;
+			letter-spacing: 0.1rem;
+		}
+
+		ul a button {
+			font-size: 1.3rem;
 		}
 	}
 `;
