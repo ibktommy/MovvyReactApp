@@ -91,7 +91,6 @@ const NavbarStyles = styled.nav`
 		padding-bottom: 1rem;
 
 		.nav-center {
-			width: 98%;
 			flex-direction: column;
 		}
 

@@ -35,8 +35,6 @@ const LandingPageStyles = styled.section`
 	}
 
 	@media screen and (max-width: 768px) {
-		width: 98%;
-
     h1 {
       font-size: 1.8rem;
       width: 85vw;

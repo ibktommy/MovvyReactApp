@@ -24,8 +24,6 @@ const MediaStyles = styled.section`
 	}
 
 	@media screen and (max-width: 768px) {
-		width: 98%;
-
 		.message {
 			font-size: 1.5rem;
 		}
