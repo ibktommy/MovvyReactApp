@@ -2,6 +2,7 @@
 import LikeIcon from '../../assets/svg/LikeIcon';
 import MissingImage from '../../assets/images/missing-image-svgrepo-com-min.png';
 import { Link } from 'react-router-dom';
+import CardItemStyles from '../../assets/styles/CardItemStyles';
 
 const CardItem = ({ dataItem, title }) => {
 	const {
@@ -17,7 +18,7 @@ const CardItem = ({ dataItem, title }) => {
 	} = dataItem;
 
 	return (
-		<>
+		<CardItemStyles>
 			<img src={imgURL} alt={movieTitle || seriesTitle} />
 			<div className='card-item-details'>
 				<div className='card-item-texts'>
@@ -34,7 +35,7 @@ const CardItem = ({ dataItem, title }) => {
 					</Link>
 				</div>
 			</div>
-		</>
+		</CardItemStyles>
 	);
 };
 

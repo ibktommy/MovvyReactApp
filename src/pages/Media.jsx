@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { RingLoader } from 'react-spinners';
 import MediaList from '../components/cards/MediaList';
+import RecommendationsList from '../components/cards/RecommendationsList';
 
 const apikey = import.meta.env.VITE_API_ACCESS_KEY;
 const authKey = import.meta.env.VITE_API_AUTHORIZATION_KEY;
@@ -25,14 +26,17 @@ const Media = () => {
 	}
 	const idNumbers = getNumInStr(id);
 	let mediaURL = '';
+	let recommendationsURL = '';
 
 	if (id.includes('series') === true) {
 		mediaURL = `https://api.themoviedb.org/3/tv/${idNumbers}?language=en-US'&Authorization=${authKey}&id&api_key=${apikey}`;
+		recommendationsURL = `https://api.themoviedb.org/3/tv/${idNumbers}/recommendations?language=en-US&page=1&Authorization=${authKey}&api_key=${apikey}`;
 	} else if (id.includes('movie') === true) {
 		mediaURL = `https://api.themoviedb.org/3/movie/${idNumbers}?language=en-US'&Authorization=${authKey}&api_key=${apikey}`;
+		recommendationsURL = `https://api.themoviedb.org/3/movie/${idNumbers}/recommendations?language=en-US&page=1&Authorization=${authKey}&api_key=${apikey}`;
 	}
 
-	// Fetch data from api-server based on the apiURL passed and the pageMenu
+	// Fetch data from api-server based on the mediaURL passed and the media-ID
 	const fetchMediaData = useQuery({
 		queryKey: ['media', id],
 		queryFn: async () => {
@@ -42,9 +46,16 @@ const Media = () => {
 		},
 	});
 
-	const { data, status, error, fetchStatus } = fetchMediaData;
+	const fetchRecommendedData = useQuery({
+		queryKey: ['recommendations', id],
+		queryFn: async () => {
+			const result = await axios.get(recommendationsURL);
 
-	console.log(fetchMediaData);
+			return result;
+		},
+	});
+
+	const { data, status, error, fetchStatus } = fetchMediaData;
 
 	if (
 		status === 'loading' &&
@@ -66,7 +77,9 @@ const Media = () => {
 	if (status === 'loading' && fetchStatus === 'paused' && data === undefined) {
 		return (
 			<MediaStyles>
-				<p className='message'>Sorry, could not load results. check your network! </p>
+				<p className='message'>
+					Sorry, could not load results. check your network!{' '}
+				</p>
 			</MediaStyles>
 		);
 	}
@@ -80,10 +93,17 @@ const Media = () => {
 	}
 
 	const mediaData = data.data;
+	const recommendationsData = fetchRecommendedData.data.data.results;
+
+	console.log(recommendationsData);
 
 	return (
 		<MediaStyles>
-			{mediaData && <MediaList dataItem={mediaData} key={idNumbers}/>}
+			{mediaData && <MediaList dataItem={mediaData} key={idNumbers} />}
+
+			{recommendationsData && (
+				<RecommendationsList key={id} dataItem={recommendationsData} />
+			)}
 		</MediaStyles>
 	);
 };
