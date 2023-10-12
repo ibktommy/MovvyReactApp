@@ -56,11 +56,12 @@ const PageFrameStyles = styled.div`
 	@media screen and (max-width: 768px) {
 		.page-menu {
 			button {
-				font-size: 1.3rem;
+        width: 10rem;
+        border-radius: .4rem;
 				padding: 0.8rem 0.5rem;
 
 				&:not(:last-of-type) {
-					margin-right: 0.5rem;
+					margin-right: 0.8rem;
 				}
 			}
 		}

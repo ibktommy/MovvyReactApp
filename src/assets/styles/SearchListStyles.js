@@ -39,6 +39,18 @@ const SearchListStyles = styled.div`
 			box-shadow: var(--card-shadow);
 		}
 	}
+
+	@media screen and (max-width: 768px) {
+		h3 {
+			font-size: 1.8rem;
+		}
+
+		.search-list {
+			.search-card {
+				width: 28rem !important;
+			}
+		}
+	}
 `;
 
 export default SearchListStyles

@@ -100,7 +100,7 @@ const NavbarStyles = styled.nav`
 		}
 
 		ul a {
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 			letter-spacing: 0.1rem;
 		}
 
@@ -109,7 +109,7 @@ const NavbarStyles = styled.nav`
 		}
 
 		ul a button {
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 			padding: .4rem 1rem;
 		}
 	}

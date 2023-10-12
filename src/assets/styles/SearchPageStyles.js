@@ -105,6 +105,70 @@ const SearchPageStyles = styled.section`
 			}
 		}
 	}
+
+	/* Responsiveness */
+
+	@media screen and (max-width: 1023px) {
+		width: 95%;
+
+		h1 {
+			font-size: 2.5rem;
+			width: 55%;
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		h1 {
+			font-size: 2rem;
+			width: 60%;
+		}
+
+		.category-menu {
+			button {
+				font-size: 1.6rem;
+			}
+		}
+
+		form {
+			width: 90%;
+
+			input {
+				font-size: 1.6rem;
+			}
+
+			button {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 98%;
+		
+		h1 {
+			width: 70%;
+			font-size: 1.8rem;
+		}
+
+		.category-menu {
+			button {
+				font-size: 1.4rem;
+			}
+		}
+
+		form {
+			width: 100%;
+
+			input {
+				font-size: 1.4rem;
+			}
+
+			button {
+				font-size: 1.4rem;
+				padding: 1rem .8rem;
+			}
+		}
+	}
 `;
 
 export default SearchPageStyles;

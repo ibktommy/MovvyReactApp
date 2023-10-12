@@ -16,6 +16,20 @@ const MediaStyles = styled.section`
 		font-size: 2rem;
 		font-weight: 500;
 	}
+
+	/* Responsiveness */
+
+	@media screen and (max-width: 1023px) {
+		width: 95%;
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 98%;
+
+		.message {
+			font-size: 1.5rem;
+		}
+	}
 `;
 
 export default MediaStyles

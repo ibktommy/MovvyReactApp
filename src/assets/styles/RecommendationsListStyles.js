@@ -18,16 +18,24 @@ const RecommedationsListStyles = styled.section`
 		margin: 2rem 0;
 
 		.swiper-container {
-      height: 45rem!important;
+			height: 45rem !important;
 
-      .swiper-wrapper {
-        height: 100%!important;
-      }
+			.swiper-wrapper {
+				height: 100% !important;
+			}
 
 			.image-card {
 				width: 26rem !important;
-        box-shadow: var(--card-shadow);
+				box-shadow: var(--card-shadow);
 			}
+		}
+	}
+
+	/* Responsiveness */
+
+	@media screen and (max-width: 768px) {
+		h3 {
+			font-size: 1.5rem;
 		}
 	}
 `;

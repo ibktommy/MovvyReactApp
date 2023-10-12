@@ -6,7 +6,6 @@ const MediaListStyles = styled.div`
 	align-items: center;
 	margin-bottom: 5rem;
 	padding: 0 2rem;
-	/* border: .1rem solid #000; */
 
 	.image {
 		width: calc(30rem + 2vw);
@@ -37,18 +36,18 @@ const MediaListStyles = styled.div`
 		&-items {
 			display: flex;
 			align-items: center;
-      gap: .8rem;
-      margin: .6rem 0;
+			gap: 0.8rem;
+			margin: 0.6rem 0;
 
-      .genres {
-        display: flex;
-        align-items: center;
-        gap: .2rem;
+			.genres {
+				display: flex;
+				align-items: center;
+				gap: 0.2rem;
 
-        p {
-          font-size: 1.2rem;
-        }
-      }
+				p {
+					font-size: 1.2rem;
+				}
+			}
 
 			.date {
 				font-size: 1.2rem;
@@ -58,7 +57,7 @@ const MediaListStyles = styled.div`
 				width: fit-content;
 				display: flex;
 				align-items: center;
-        flex-direction: row-reverse;
+				flex-direction: row-reverse;
 
 				p {
 					font-size: 1.2rem;
@@ -72,9 +71,30 @@ const MediaListStyles = styled.div`
 			}
 		}
 
-    .story {
-      font-size: 1.4rem;
-    }
+		.story {
+			font-size: 1.4rem;
+		}
+	}
+
+	/* Responsiveness */
+
+	@media screen and (max-width: 1023px) {
+	}
+
+	@media screen and (max-width: 992px) {
+		flex-direction: column;
+
+		.image {
+			align-self: flex-start;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.details {
+			h2 {
+				font-size: 2.4rem;
+			}
+		}
 	}
 `;
 
