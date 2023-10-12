@@ -4,7 +4,6 @@ import MissingImage from '../../assets/images/missing-image-svgrepo-com-min.png'
 import { Link } from 'react-router-dom';
 
 const CardItem = ({ dataItem, title }) => {
-	console.log(title);
 	const {
 		title: movieTitle,
 		name: seriesTitle,
@@ -30,7 +29,7 @@ const CardItem = ({ dataItem, title }) => {
 						<p>{rating.toFixed(2)}</p>
 						<LikeIcon id='like-icon' />
 					</div>
-					<Link to={`/media/${title + id}`} target='_blank'>
+					<Link to={`/media/${title + id}`}>
 						<button>view info</button>
 					</Link>
 				</div>
