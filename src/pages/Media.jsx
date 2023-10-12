@@ -24,7 +24,22 @@ const Media = () => {
 
 		return Number(numArr.join(''));
 	}
+
+	// Get the letters in the id string to be passed to the Recommendations component
+	function getWordsInStr(str) {
+		let wordArr = [];
+		for (let i = 0; i < str.length; i++) {
+			let numbers = Number(str[i]);
+			if (!numbers) {
+				wordArr.push(str[i]);
+			}
+		}
+
+		return wordArr.join('');
+	}
+
 	const idNumbers = getNumInStr(id);
+	const idWords = getWordsInStr(id);
 	let mediaURL = '';
 	let recommendationsURL = '';
 
@@ -92,17 +107,30 @@ const Media = () => {
 		);
 	}
 
-	const mediaData = data.data;
-	const recommendationsData = fetchRecommendedData.data.data.results;
+	// Getting actual data Array from the useQuery data
+	const mediaData = data?.data;
+	const recommendationsData = fetchRecommendedData?.data?.data?.results;
 
-	console.log(recommendationsData);
+	if (!recommendationsData) {
+		return (
+			<MediaStyles>
+				<p className='message'>
+					Sorry, we experienced an error. You can try reloading the webpage.
+				</p>
+			</MediaStyles>
+		);
+	}
 
 	return (
 		<MediaStyles>
 			{mediaData && <MediaList dataItem={mediaData} key={idNumbers} />}
 
 			{recommendationsData && (
-				<RecommendationsList key={id} dataItem={recommendationsData} />
+				<RecommendationsList
+					key={id}
+					dataItem={recommendationsData}
+					title={idWords}
+				/>
 			)}
 		</MediaStyles>
 	);

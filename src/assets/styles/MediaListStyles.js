@@ -4,9 +4,9 @@ const MediaListStyles = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
-  justify-content: center;
 	margin-bottom: 5rem;
-	padding: 0 0.5rem;
+	padding: 0 2rem;
+	/* border: .1rem solid #000; */
 
 	.image {
 		width: calc(30rem + 2vw);

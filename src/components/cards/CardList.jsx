@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 const CardList = ({ data, title }) => {
-	const dataDetails = data.results;
-	return (
+	const dataDetails = data?.results;
+return (
 		<CardListStyles>
 			<Swiper spaceBetween={20} slidesPerView={'auto'} className='swiper-grid'>
 				{
