@@ -76,7 +76,7 @@ const SearchList = ({ searchTerm, category }) => {
 				<div className='search-list'>
 					{searchData.map((dataItem) => (
 						<div className='search-card' key={dataItem.id}>
-							<CardItem dataItem={dataItem} />
+							<CardItem dataItem={dataItem} title={category}/>
 						</div>
 					))}
 				</div>

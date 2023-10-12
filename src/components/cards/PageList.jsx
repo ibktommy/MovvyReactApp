@@ -23,8 +23,6 @@ const PageList = ({pageMenu, title}) => {
 		apiURL = requests.requestTopRatedSeries;
 	}
 
-  console.log(apiURL);
-
 	// Fetch data from api-server based on the apiURL passed and the pageMenu
 	const fetchPageData = useQuery({
 		queryKey: ['pageData', pageMenu],
@@ -77,7 +75,7 @@ const PageList = ({pageMenu, title}) => {
 		<PageListStyles>
 			{pageData.map((dataItem) => (
 				<div className='page-card' key={dataItem.id}>
-					<CardItem dataItem={dataItem} />
+					<CardItem dataItem={dataItem} title={title}/>
 				</div>
 			))}
 		</PageListStyles>

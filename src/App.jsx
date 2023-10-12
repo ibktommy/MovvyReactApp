@@ -7,6 +7,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import SearchPage from './pages/SearchPage'
 import MoviePage from './pages/MoviePage'
 import SeriesPage from './pages/SeriesPage'
+import Media from './pages/Media'
 
 // React Query Client for data fetching and management
 const queryClient = new QueryClient({
@@ -43,6 +44,10 @@ const App = () => {
         {
           path: '/series',
           element: <SeriesPage />
+        },
+        {
+          path: "/media/:id",
+          element: <Media />,
         }
       ]
     },

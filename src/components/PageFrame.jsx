@@ -9,7 +9,7 @@ const PageFrame = ({ title }) => {
 		`popular ${title}`,
 	];
 
-	const [pageMenu, setPageMenuList] = useState(`trending ${title}`);
+	const [pageMenu, setPageMenuList] = useState(`top rated ${title}`);
 
 	// Function called when the page-menu buttons are clicked
 	function menuBtnHandler(menuName) {

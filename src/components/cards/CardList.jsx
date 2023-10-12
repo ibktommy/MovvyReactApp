@@ -4,7 +4,7 @@ import CardItem from './CardItem';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-const CardList = ({ data }) => {
+const CardList = ({ data, title }) => {
 	const dataDetails = data.results;
 	return (
 		<CardListStyles>
@@ -14,7 +14,7 @@ const CardList = ({ data }) => {
 						const { id } = dataItem
 						return (
 							<SwiperSlide key={id} className='image-card'>
-								<CardItem dataItem={dataItem}/>
+								<CardItem dataItem={dataItem} title={title}/>
 							</SwiperSlide>
 						)
 					})

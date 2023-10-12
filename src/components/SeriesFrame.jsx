@@ -54,7 +54,7 @@ const SeriesFrame = ({ title, linkText, status, error, fetchStatus, data }) => {
 	return (
 		<FrameStyles>
 			<h3>{title}</h3>
-			<CardList data={data} />
+			<CardList data={data} title={linkText}/>
 			<Link to='./movies' className='link'>
 				explore {linkText}
 			</Link>
