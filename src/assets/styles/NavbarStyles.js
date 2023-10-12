@@ -88,8 +88,11 @@ const NavbarStyles = styled.nav`
 	}
 
 	@media screen and (max-width: 768px) {
+		padding-bottom: 1rem;
+
 		.nav-center {
 			width: 98%;
+			flex-direction: column;
 		}
 
 		.logo svg {
@@ -101,8 +104,13 @@ const NavbarStyles = styled.nav`
 			letter-spacing: 0.1rem;
 		}
 
+		ul a:not(:last-of-type) {
+			margin-right: .8rem;
+		}
+
 		ul a button {
 			font-size: 1.3rem;
+			padding: .4rem 1rem;
 		}
 	}
 `;

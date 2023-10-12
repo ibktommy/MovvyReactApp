@@ -39,7 +39,8 @@ const LandingPageStyles = styled.section`
 
     h1 {
       font-size: 1.8rem;
-      width: 75vw;
+      width: 85vw;
+      letter-spacing: .1rem;
     }
 	}
 `;
