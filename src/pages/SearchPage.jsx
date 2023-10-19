@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import SearchPageStyles from '../assets/styles/SearchPageStyles';
 import SearchList from '../components/cards/SearchList';
-import Button from '../components/Button';
 
 const searchCategories = [
 	{

@@ -13,7 +13,7 @@ const CardItem = ({ dataItem, title }) => {
 		first_air_date: seriesDate,
 		imgURL = dataItem?.poster_path === null
 			? MissingImage
-			: `https://image.tmdb.org/t/p/original/${dataItem?.poster_path}`,
+			: `https://image.tmdb.org/t/p/w500/${dataItem?.poster_path}`,
 		id,
 	} = dataItem;
 
