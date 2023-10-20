@@ -94,6 +94,12 @@ const MediaListStyles = styled.div`
 			h2 {
 				font-size: 2.4rem;
 			}
+
+			&-items {
+				flex-direction: column;
+				align-items: flex-start;
+				margin: 2rem 0;
+			}
 		}
 	}
 `;
