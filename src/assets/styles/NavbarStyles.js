@@ -8,10 +8,11 @@ const NavbarStyles = styled.nav`
 	height: 8rem;
 	box-shadow: var(--box-shadow);
 	z-index: 5;
-	background-color: var(--bg-white);
+	background-color: var(--body-bg);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-bottom: .1rem solid var(--text-dark);
 
 	.nav-center {
 		width: 80%;

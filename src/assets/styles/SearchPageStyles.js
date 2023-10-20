@@ -42,7 +42,7 @@ const SearchPageStyles = styled.section`
 			font-family: var(--sec-font);
 			font-size: 2rem;
 			font-weight: 400;
-			color: var(--text-dark);
+			color: var(--pry-color);
 			cursor: pointer;
 
 			&:first-of-type {

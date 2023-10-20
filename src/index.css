@@ -17,8 +17,9 @@
 	--text-fade: #aeaeae;
 	--box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
 		rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-	--card-shadow: rgba(0,0,0,0.05) 0px 0px 0px 1px, rgb(209,213,219) 0px 0px 0px 1px inset;
+	--card-shadow: rgba(0,0,0,0.05) 0px 0px 0px 1px, rgb(16,12,6) 0px 0px 0px 1px inset;
   --frame-shadow: rgba(0,0,0,0.24) 0px 3px 5px;
+	--body-bg: #1a1a1a;
 }
 
 html {
@@ -30,8 +31,8 @@ html {
 
 body {
 	position: relative;
-	background-color: var(--bg-white);
-	color: var(--text-dark);
+	background-color: var(--body-bg);
+	color: var(--bg-white);
 	min-height: 100vh;
 }
 
@@ -42,7 +43,7 @@ ul {
 a {
 	display: inline-block;
 	position: relative;
-	color: var(--text-dark);
+	color: var(--pry-color);
 	text-decoration: none;
 }
 

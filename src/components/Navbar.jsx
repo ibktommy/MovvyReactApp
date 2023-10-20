@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import NavbarStyles from "../assets/styles/NavbarStyles";
-import LogoDark from "../assets/svg/LogoDark";
+import LogoWhite from "../assets/svg/LogoWhite";
 
 const Navbar = () => {
   return (
 		<NavbarStyles>
 			<div className='nav-center'>
 				<Link className='logo'>
-					<LogoDark />
+					<LogoWhite />
 				</Link>
 
 				<ul>
